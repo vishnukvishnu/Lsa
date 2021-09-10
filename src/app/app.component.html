@@ -1,0 +1,31 @@
+<div *ngIf="router.url !== '/landing'">
+    <app-header></app-header>
+    <div class="fluid-container app-main-container">
+
+
+            <div class="tab-container">
+            
+              <ul>
+                  <p class="label-sub-title">Long service awards</p>
+                  <li (click) = "three()">
+                      <a routerLink="/home/tenure" id = "nominie-active" (click) = "tenurRemoveActive()" routerLinkActive="active-link">My tenure @ Wipro</a>
+                  </li>
+
+                <li (click) = "two()">
+                    <a routerLink="/home/citations/pending-citations" id = "myDIV" 
+                     routerLinkActive="active-link">My citations</a>
+                    <span class="absent-count">
+                        <span class="value">05</span>
+                    </span>
+                </li>
+                <li (click) = "one()">
+                    <a routerLink="/home/welcome" id = "tenure-active" (click) = "nomRemoeActive()"
+                     routerLinkActive="active-link">My nominations</a>
+                  </li>
+              </ul>
+            </div>
+      
+      </div>
+</div>
+
+<router-outlet></router-outlet>
